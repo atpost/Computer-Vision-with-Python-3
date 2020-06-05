@@ -75,7 +75,7 @@ image1_alpha = np.dstack((gray2rgb(image1_warp), image1_mask))
 
 merged = (image0_alpha + image1_alpha)
 
-alpha = merged[..., 3].
+alpha = merged[..., 3]
 merged /= np.maximum(alpha, 1)[..., np.newaxis]
 
 imsave('output.jpg', merged)
